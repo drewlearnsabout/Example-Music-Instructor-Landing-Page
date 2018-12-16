@@ -9,6 +9,10 @@ body {
     grid-template-columns: 1fr 2fr;
 }
 
+#topnav {
+    overflow: hidden;
+}
+
 #navbarGrid {
     display: grid;
     grid-gap: 1em 7em;
