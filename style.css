@@ -1,5 +1,7 @@
 body {
     margin: 0 auto;
+    font-family: 'Thasadith', sans-serif;
+    background: black;
 }
 
 #navbar {
@@ -7,10 +9,7 @@ body {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 2fr;
-}
-
-#topnav {
-    overflow: hidden;
+    background: rgb(145, 145, 145);
 }
 
 #navbarGrid {
@@ -20,7 +19,7 @@ body {
 }
 
 #navbar img {
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
 .navButtons {
@@ -28,34 +27,35 @@ body {
     text-decoration: none;
 }
 
-.navButtons:hover {
-
-}
-
 header {
-    position: relative;
+    position: absolute;
     display: grid;
     width: 100%;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.4);
 }
 
 #banner {
     width: 100%;
+    padding: 1em 0 1em 0;
     position: absolute;
     display: grid;
     justify-content: center;
     grid-template-columns: 17em 17em 17em 17em;
+    overflow: hidden;
     grid-gap: 0.2em 0.2em;
     z-index: -1;
+    background-color: rgb(255, 255, 255);
 }
 
 header h1 {
+    display: grid;
+    justify-items: center;
+    font-weight: lighter;
     width: 100%;
-    position: relative;
+    margin-top: 2.5em;
     color: white;
-    text-shadow: 2px 2px 2px black;
-    
+    text-shadow: 2px 2px 2px rgba(0, 247, 255, 0.541);
+    background-color: rgba(128, 128, 128, 0.63);
 }
 
 header h1 span {
@@ -75,5 +75,9 @@ header h1 span {
     
     #banner {
         grid-template-columns: 9em 9em;
+    }
+
+    header h1 {
+        font-size: 1.6em;
     }
 }
