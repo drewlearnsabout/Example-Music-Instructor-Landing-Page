@@ -1,6 +1,6 @@
 body {
     margin: 0 auto;
-    font-family: 'Thasadith', sans-serif;
+    font-family: 'Pacifico', cursive;
     background: black;
 }
 
@@ -25,6 +25,10 @@ body {
 .navButtons {
     color: black;
     text-decoration: none;
+}
+
+.navButtons:hover {
+    color: rgb(255, 205, 41);
 }
 
 header {
@@ -53,9 +57,13 @@ header h1 {
     font-weight: lighter;
     width: 100%;
     margin-top: 2.5em;
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 247, 255, 0.541);
-    background-color: rgba(128, 128, 128, 0.63);
+    padding: 0.5em;
+    color: rgb(255, 205, 41);
+    text-shadow: 1px 1px 1px rgb(255, 84, 84);
+    background-color: rgba(0, 0, 0, 0.815);
+    animation-name: bannerFade5;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 header h1 span {
@@ -65,6 +73,27 @@ header h1 span {
 .pictures {
     height: 14em;
     width: 17em;
+}
+
+#pic1 {
+    animation-name: bannerFade1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#pic2 {
+    animation-name: bannerFade2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#pic3 {
+    animation-name: bannerFade3;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#pic4 {
+    animation-name: bannerFade4;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 720px) {
@@ -79,5 +108,61 @@ header h1 span {
 
     header h1 {
         font-size: 1.6em;
+    }
+}
+
+@keyframes bannerFade1 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes bannerFade2 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes bannerFade3 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes bannerFade4 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes bannerFade5 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
