@@ -15,7 +15,7 @@ body {
 #navbarGrid {
     display: grid;
     grid-gap: 1em 7em;
-    grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
 }
 
 #navbar img {
@@ -32,10 +32,11 @@ body {
 }
 
 header {
-    position: absolute;
+    position: relative;
     display: grid;
     width: 100%;
     justify-content: center;
+    margin-bottom: 5.5em;
 }
 
 #banner {
@@ -94,6 +95,40 @@ header h1 span {
     animation-name: bannerFade4;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+}
+
+#aboutSection {
+    font-family: 'Roboto Slab', serif;
+    max-width: 700px;
+    background: rgb(255, 205, 41);
+    padding: 1em;
+    border-radius: 0 1em 1em 0;
+    font-size: 1.2em;
+    display: grid;
+    grid-template-columns: max-width 700px;
+}
+
+#aboutSection p span {
+    font-weight: bold;
+}
+
+#reviewSection {
+    margin-top: 1em;
+    max-width: 700px;
+    background: rgb(255, 205, 41);
+    background-position: right center;
+    padding: 1em;
+    border-radius: 0 1em 1em 0;
+    font-size: 1.2em;
+    display: grid;
+    grid-template-columns: max-width 700px;
+}
+
+#reviewSection p {
+    font-family: 'Roboto Slab', serif;
+}
+#reviewSection p span {
+    font-family: 'Pacifico', cursive;
 }
 
 @media (max-width: 720px) {
