@@ -5,17 +5,71 @@ body {
 }
 
 #navbar {
-    padding: 1em 0 1em 0;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 2fr;
+    padding: 1em 0 0 0;
     background: rgb(145, 145, 145);
+    width: 100%;
+}
+
+#navToggle {
+    display: none;
+}
+
+.navToggleLabel {
+    position: absolute;
+    margin-right: 1em;
+    top: 0;
+    right: 0;
+    height: 5.7em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navToggleLabel span, .navToggleLabel span::before, .navToggleLabel span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 1.5em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.navToggleLabel span::before, .navToggleLabel span::after {
+    content: '';
+    position: absolute;
+}
+
+.navToggleLabel span::before {
+    top: 7px;
+}
+
+.navToggleLabel span::after {
+    bottom: 7px;
 }
 
 #navbarGrid {
+    transform: scale(1, 0);
+    transform-origin: top;
+}
+
+.navToggle:checked ~ #navbarGrid {
+    transform: scale(1, 1);
     display: grid;
-    grid-gap: 1em 7em;
-    grid-template-columns: repeat(auto-fill, minmax(8em, 1fr));
+    justify-items: center;
+    transition: transform 250ms ease-in-out 120ms;
+}
+
+.navToggle:checked ~ .topNav a {
+    opacity: 1;
+}
+
+.topNav {
+    margin-right: 1em;
+}
+
+.topNav a {
+    opacity: 0;
+    transition: transform 100ms ease-in-out 100ms;
 }
 
 #navbar img {
@@ -25,6 +79,7 @@ body {
 .navButtons {
     color: black;
     text-decoration: none;
+    padding-bottom: 0.5em;
 }
 
 .navButtons:hover {
@@ -36,7 +91,7 @@ header {
     display: grid;
     width: 100%;
     justify-content: center;
-    margin-bottom: 5.5em;
+    margin-bottom: 8.5em;
 }
 
 #banner {
@@ -155,8 +210,8 @@ header h1 span {
 
 @media (max-width: 720px) {
     .pictures {
-        height: 7em;
-        width: 9em;
+        height: 6.5em;
+        width: 8.5em;
     }
     
     #banner {
@@ -164,7 +219,7 @@ header h1 span {
     }
 
     header h1 {
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
 
     .topSection {
@@ -181,6 +236,11 @@ header h1 span {
         margin-top: 1em;
         grid-area: 2 / 1 / 3 / 2;
         border-radius: 0;
+    }
+
+    #aboutSection, #reviewSection {
+        font-size: 1em;
+        max-width: 100%;
     }
 }
 
