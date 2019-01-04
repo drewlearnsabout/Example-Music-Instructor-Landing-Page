@@ -5,7 +5,7 @@ body {
 }
 
 #navbar {
-    padding: 1em 0 0 0;
+    padding: 0.5em 0 0 0;
     background: rgb(145, 145, 145);
     width: 100%;
 }
@@ -19,7 +19,7 @@ body {
     margin-right: 1em;
     top: 0;
     right: 0;
-    height: 5.7em;
+    height: 5em;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -63,13 +63,8 @@ body {
     opacity: 1;
 }
 
-.topNav {
-    margin-right: 1em;
-}
-
 .topNav a {
     opacity: 0;
-    transition: transform 100ms ease-in-out 100ms;
 }
 
 #navbar img {
@@ -91,7 +86,7 @@ header {
     display: grid;
     width: 100%;
     justify-content: center;
-    margin-bottom: 8.5em;
+    margin-bottom: 5em;
 }
 
 #banner {
@@ -152,15 +147,40 @@ header h1 span {
     animation-fill-mode: forwards;
 }
 
+#socialMedia {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    justify-items: center;
+    margin-bottom: 2em;
+    padding: 1em 0 1em 0;
+    border-top: 1px solid rgb(255, 205, 41);
+    border-bottom: 1px solid rgb(255, 205, 41);
+}
+
+#socialMedia img {
+    height: 2.5em;
+    background: rgb(255, 205, 41);
+    border: 1px solid rgb(255, 205, 41);
+    border-radius: 2em;
+}
+
+#socialMedia img:hover {
+    animation-name: resize2;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
 #contactButton {
     background: rgb(255, 205, 41);
     font-family: 'Roboto Slab', serif;
     font-size: 1em;
+    font-weight: bold;
     margin: 0 auto;
     padding: 1em 2em 1em 2em;
     cursor: pointer;
     display: grid;
     border-radius: 1em;
+    border: 1px solid black;
 }
 
 #contactButton:hover {
@@ -171,9 +191,9 @@ header h1 span {
 
 .topSection {
     display: grid;
-    margin-top: 3em;
+    margin-top: 2em;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 #aboutSection {
@@ -192,7 +212,6 @@ header h1 span {
 }
 
 #reviewSection {
-    margin: 0 auto;
     max-width: 700px;
     background: rgb(255, 205, 41);
     padding: 1em;
@@ -208,6 +227,21 @@ header h1 span {
     font-family: 'Pacifico', cursive;
 }
 
+#bottomSection {
+    font-family: 'Roboto Slab', serif;
+    margin: 1em 0 1em 0;
+    background: gray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    border-top: 1px solid rgb(255, 205, 41);
+    border-bottom: 1px solid rgb(255, 205, 41);
+}
+
+#bottomSection p {
+    color: white;
+}
+
 @media (max-width: 720px) {
     .pictures {
         height: 6.5em;
@@ -216,6 +250,10 @@ header h1 span {
     
     #banner {
         grid-template-columns: 9em 9em;
+    }
+
+    header {
+        margin-bottom: 8.5em;
     }
 
     header h1 {
@@ -242,15 +280,31 @@ header h1 span {
         font-size: 1em;
         max-width: 100%;
     }
+
+    #bottomSection {
+        grid-template-columns: 1fr;
+    }
 }
 
 @keyframes resize {
     0% {
         font-size: 1em;
+        font-weight: bold;
     }
 
     100% {
         font-size: 1.5em;
+        font-weight: normal;
+    }
+}
+
+@keyframes resize2 {
+    0% {
+        height: 2.5em;
+    }
+
+    100% {
+        height: 3em;
     }
 }
 
