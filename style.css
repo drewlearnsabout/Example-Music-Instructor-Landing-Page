@@ -16,7 +16,7 @@ body {
 
 .navToggleLabel {
     position: absolute;
-    margin-right: 1em;
+    margin-right: 2em;
     top: 0;
     right: 0;
     height: 5em;
@@ -68,7 +68,7 @@ body {
 }
 
 #navbar img {
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 .navButtons {
@@ -181,6 +181,7 @@ header h1 span {
     display: grid;
     border-radius: 1em;
     border: 1px solid black;
+    transform: skew(0.02turn, -3deg);
 }
 
 #contactButton:hover {
@@ -205,6 +206,7 @@ header h1 span {
     border-radius: 1em;
     font-size: 1.2em;
     grid-area: 1 / 1 / 2 / 2;
+    transform: skew(-0.02turn, 3deg);
 }
 
 #aboutSection p span {
@@ -214,10 +216,12 @@ header h1 span {
 #reviewSection {
     max-width: 700px;
     background: rgb(255, 205, 41);
+    margin-bottom: 1em;
     padding: 1em;
     border-radius: 1em;
     font-size: 1.2em;
     grid-area: 2 / 2 / 3 / 3;
+    transform: skew(0.02turn, -3deg);
 }
 
 #reviewSection p {
@@ -228,7 +232,8 @@ header h1 span {
 }
 
 #bottomSection {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Thasadith', sans-serif;
+    font-weight: bold;
     margin: 1em 0 1em 0;
     background: gray;
     display: grid;
