@@ -8,6 +8,14 @@ body {
     padding: 0.5em 0 0 0;
     background: rgb(145, 145, 145);
     width: 100%;
+    border-bottom: 1px solid rgb(255, 205, 41);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 #navToggle {
@@ -73,7 +81,7 @@ body {
 
 .navButtons {
     color: black;
-    text-decoration: none;
+    text-decoration: none; 
     padding-bottom: 0.5em;
 }
 
@@ -86,6 +94,7 @@ header {
     display: grid;
     width: 100%;
     justify-content: center;
+    margin-top: 6em;
     margin-bottom: 5em;
 }
 
